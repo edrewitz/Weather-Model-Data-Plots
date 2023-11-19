@@ -108,10 +108,10 @@ c_height_24 = ax1.contour(lon_2d, lat_2d, height_vals[8, :, :], colors='black', 
                       transform=ccrs.PlateCarree())
 
 c_falls_24 = ax1.contour(lon_2d, lat_2d, falls_24, colors='black', linewidths=0.5,
-                      transform=ccrs.PlateCarree(), levels=np.arange(-150, 160, 10))
+                      transform=ccrs.PlateCarree(), levels=np.arange(-350, 360, 10))
 
 cf_falls_24 = ax1.contourf(lon_2d, lat_2d, falls_24,
-                      transform=ccrs.PlateCarree(), levels=np.arange(-150, 160, 10), cmap='coolwarm')
+                      transform=ccrs.PlateCarree(), levels=np.arange(-350, 360, 10), cmap='coolwarm')
 
 # CREATES AND LABELS A COLORBAR
 cbar_falls_24 = fig.colorbar(cf_falls_24, pad=0.01, shrink=0.8)
@@ -134,10 +134,10 @@ c_height_48 = ax2.contour(lon_2d, lat_2d, height_vals[16, :, :], colors='black',
                       transform=ccrs.PlateCarree())
 
 c_falls_48 = ax2.contour(lon_2d, lat_2d, falls_48, colors='black', linewidths=0.5,
-                      transform=ccrs.PlateCarree(), levels=np.arange(-150, 160, 10))
+                      transform=ccrs.PlateCarree(), levels=np.arange(-350, 360, 10))
 
 cf_falls_48 = ax2.contourf(lon_2d, lat_2d, falls_48,
-                      transform=ccrs.PlateCarree(), levels=np.arange(-150, 160, 10), cmap='coolwarm')
+                      transform=ccrs.PlateCarree(), levels=np.arange(-350, 360, 10), cmap='coolwarm')
 
 # CREATES AND LABELS A COLORBAR
 cbar_falls_48 = fig.colorbar(cf_falls_48, pad=0.01, shrink=0.8)
@@ -159,10 +159,10 @@ c_height_72 = ax3.contour(lon_2d, lat_2d, height_vals[24, :, :], colors='black',
                       transform=ccrs.PlateCarree())
 
 c_falls_72 = ax3.contour(lon_2d, lat_2d, falls_72, colors='black', linewidths=0.5,
-                      transform=ccrs.PlateCarree(), levels=np.arange(-150, 160, 10))
+                      transform=ccrs.PlateCarree(), levels=np.arange(-350, 360, 10))
 
 cf_falls_72 = ax3.contourf(lon_2d, lat_2d, falls_72,
-                      transform=ccrs.PlateCarree(), levels=np.arange(-150, 160, 10), cmap='coolwarm')
+                      transform=ccrs.PlateCarree(), levels=np.arange(-350, 360, 10), cmap='coolwarm')
 
 # CREATES AND LABELS A COLORBAR
 cbar_falls_72 = fig.colorbar(cf_falls_72, pad=0.01, shrink=0.8)
