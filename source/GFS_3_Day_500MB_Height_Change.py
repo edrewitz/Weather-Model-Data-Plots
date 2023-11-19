@@ -35,7 +35,10 @@ data = ncss.get_data(query)
 
 # SETS UP EACH DATA ARRAY
 height_var = data['Geopotential_height_isobaric']
-time_var = data['time']
+try:
+    time_var = data['time']
+except Exception as e:
+    time_var = data['time1']
 lat_var = data['latitude']
 lon_var = data['longitude']
 
@@ -170,7 +173,7 @@ ax3.clabel(c_height_72, fontsize=14, inline=1, inline_spacing=1, fmt='%i', right
 ax3.set_title('72-Hour: '+ time_vals[24].strftime('%m/%d/%Y %HZ'), fontsize=18, fontweight='bold')
 
 # PROGRAMMER SIGNATURE AND CITING THE DATA SOURCE AT THE BOTTOM OF THE FIGURE AND GIVES THE TIME THE IMAGE WAS CREATED
-fig.text(0.30, 0.05, 'Developed by: Eric Drewitz | Data Source: thredds.ucar.edu\n           Image Created: ' + now.strftime('%m/%d%Y %H:%MZ'), fontsize=18, fontweight='bold')
+fig.text(0.30, 0.05, 'Developed by: Eric Drewitz | Data Source: thredds.ucar.edu\n           Image Created: ' + now.strftime('%m/%d/%Y %H:%MZ'), fontsize=18, fontweight='bold')
 
 # SAVES FIGURE TO THE WEATHER DATA FOLDER
 plt.savefig(f"Weather Data/GFS 500 MB Height Falls And Rises")
